@@ -12,16 +12,15 @@
 namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 
 /**
- * RedisSessionHandler
+ * RedisSessionHandler.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  * @author stackoverflow <admin@2.pl>
- *
  */
 class RedisSessionHandler implements \SessionHandlerInterface
 {
     /**
-     * @var \Redis  driver
+     * @var \Redis driver
      */
     private $redis;
 
@@ -31,10 +30,10 @@ class RedisSessionHandler implements \SessionHandlerInterface
     private $ttl;
 
     /**
-     * Class Constructor
+     * Class Constructor.
      *
      * @param \Redis $redis A memcached instance
-     * @param int   $ttl    Session lifetime
+     * @param int    $ttl   Session lifetime
      */
     public function __construct(\Redis $redis, $ttl)
     {
